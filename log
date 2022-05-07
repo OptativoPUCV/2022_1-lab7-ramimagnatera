@@ -210,3 +210,9 @@ heap.c:26:63: error: expected expression before ‘)’ token
                                                                ^
 Compilation failed
 a0f63a0
+Sat May  7 04:53:08 UTC 2022: 
+ heap.c | 2 ++
+ 1 file changed, 2 insertions(+)
+ tests:  2|2
+total_score: 20/70
+7c7d99c
