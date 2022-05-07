@@ -510,3 +510,13 @@ heap.c:27:54: error: ‘heapElem {aka struct nodo}’ has no member named ‘cap
                                                       ^~
 Compilation failed
 22b6e71
+Sat May  7 21:06:55 UTC 2022: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+heap.c: In function ‘heap_push’:
+heap.c:27:57: error: invalid operands to binary * (have ‘int’ and ‘heapElem * {aka struct nodo *}’)
+     pq->heapArray = (heapElem*) realloc(pq->heapArray, 2*pq->heapArray+1);
+                                                         ^~~~~~~~~~~~~~
+Compilation failed
+8e25814
