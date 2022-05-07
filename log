@@ -28,3 +28,17 @@ heap.c:34:14: error: expected identifier or ‘(’ before ‘=’ token
               ^
 Compilation failed
 71c168d
+Sat May  7 00:59:51 UTC 2022: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+heap.c: In function ‘createHeap’:
+heap.c:35:3: error: expected ‘,’ or ‘;’ before ‘h’
+   h->size = 0;
+   ^
+heap.c:34:14: error: unused variable ‘harray’ [-Werror=unused-variable]
+   heapElem * harray = (heapElem*) malloc(3 * sizeof(heapElem))
+              ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+4e56577
