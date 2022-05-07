@@ -12,3 +12,9 @@ heap.c:35:7: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attrib
        ^~
 Compilation failed
 cdd6d72
+Sat May  7 00:58:09 UTC 2022: 
+ heap.c | 1 -
+ 1 file changed, 1 deletion(-)
+ tests:  0|4
+total_score: 0/70
+918e616
