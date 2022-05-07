@@ -16,23 +16,23 @@ typedef struct Heap{
   int capac;
 } Heap;
 
-
 void* heap_top(Heap* pq){
-    return NULL;
+  
+  return NULL;
 }
-
-
 
 void heap_push(Heap* pq, void* data, int priority){
 
 }
-
 
 void heap_pop(Heap* pq){
 
 }
 
 Heap* createHeap(){
-
-   return NULL;
+  Heap * heap = (Heap*) malloc(sizeof(Heap));
+  Heapelem * 
+  heap->size = 0;
+  heap->capac = 3;
+  return NULL;
 }

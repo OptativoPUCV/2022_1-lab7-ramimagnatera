@@ -1,0 +1,14 @@
+Sat May  7 00:58:01 UTC 2022: 
+ heap.c | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+In file included from test.c:4:0:
+heap.c: In function ‘createHeap’:
+heap.c:34:3: error: unknown type name ‘Heapelem’; did you mean ‘heapElem’?
+   Heapelem *
+   ^~~~~~~~
+   heapElem
+heap.c:35:7: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘->’ token
+   heap->size = 0;
+       ^~
+Compilation failed
+cdd6d72
