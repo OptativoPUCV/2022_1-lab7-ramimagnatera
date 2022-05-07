@@ -530,3 +530,9 @@ heap.c:27:71: error: ‘heapElem {aka struct nodo}’ has no member named ‘cap
                                                                        ^~
 Compilation failed
 9855025
+Sat May  7 21:07:14 UTC 2022: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  5|2
+total_score: 35/70
+33d9ee5
