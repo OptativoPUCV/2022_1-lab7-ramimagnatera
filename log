@@ -222,3 +222,38 @@ Sat May  7 19:25:36 UTC 2022:
  tests:  2|2
 total_score: 20/70
 818e1de
+Sat May  7 20:24:12 UTC 2022: 
+ heap.c | 14 ++++++++++++++
+ 1 file changed, 14 insertions(+)
+In file included from test.c:4:0:
+heap.c: In function ‘heap_push’:
+heap.c:30:17: error: ‘size’ undeclared (first use in this function); did you mean ‘sinl’?
+   pq->heapArray[size]->data = data;
+                 ^~~~
+                 sinl
+heap.c:30:17: note: each undeclared identifier is reported only once for each function it appears in
+heap.c:42:46: error: invalid type argument of ‘->’ (have ‘heapElem {aka struct nodo}’)
+     pq->heapArray[(size-1)/2]->priority = aux->priority;
+                                              ^~
+heap.c:43:42: error: invalid type argument of ‘->’ (have ‘heapElem {aka struct nodo}’)
+     pq->heapArray[(size-1)/2]->data = aux->data;
+                                          ^~
+test.c:276:5: error: ‘main’ is normally a non-static function [-Werror=main]
+ int main( int argc, char *argv[] ) {
+     ^~~~
+test.c:292:1: error: expected declaration or statement at end of input
+ }
+ ^
+test.c:12:6: error: unused variable ‘msg’ [-Werror=unused-variable]
+ char msg[300];
+      ^~~
+At top level:
+test.c:276:5: error: ‘main’ defined but not used [-Werror=unused-function]
+ int main( int argc, char *argv[] ) {
+     ^~~~
+test.c:6:8: error: ‘_strdup’ defined but not used [-Werror=unused-function]
+ char * _strdup(const char * str) {
+        ^~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+e4d196b
