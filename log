@@ -441,3 +441,9 @@ heap.c:40:63: error: expected ‘]’ before numeric constant
                                                                ^
 Compilation failed
 3863485
+Sat May  7 20:46:20 UTC 2022: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  4|2
+total_score: 30/70
+8770973
