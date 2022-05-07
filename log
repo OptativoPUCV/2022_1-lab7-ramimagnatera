@@ -391,3 +391,16 @@ heap.c:43:46: error: invalid type argument of ‘->’ (have ‘heapElem {aka st
                                               ^~
 Compilation failed
 b5f4f35
+Sat May  7 20:26:48 UTC 2022: 
+ heap.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+In file included from test.c:4:0:
+heap.c: In function ‘heap_push’:
+heap.c:36:9: error: incompatible types when assigning to type ‘heapElem {aka struct nodo}’ from type ‘int’
+     aux = pq->heapArray[pq->size].priority;
+         ^
+heap.c:37:9: error: incompatible types when assigning to type ‘heapElem {aka struct nodo}’ from type ‘void *’
+     aux = pq->heapArray[pq->size].data;
+         ^
+Compilation failed
+aaabeb1
