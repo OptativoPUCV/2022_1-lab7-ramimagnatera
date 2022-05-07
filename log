@@ -410,3 +410,15 @@ Sat May  7 20:27:23 UTC 2022:
  tests:  2|2
 total_score: 20/70
 75bb848
+Sat May  7 20:27:33 UTC 2022: 
+ heap.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:4:0:
+heap.c: In function ‘heap_push’:
+heap.c:45:3: error: ‘size’ undeclared (first use in this function); did you mean ‘sinl’?
+   size++;
+   ^~~~
+   sinl
+heap.c:45:3: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+1a1a1b9
