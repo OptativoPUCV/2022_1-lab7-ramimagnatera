@@ -53,3 +53,14 @@ heap.c:34:14: error: unused variable ‘harray’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 4d81401
+Sat May  7 01:01:14 UTC 2022: 
+ heap.c | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+In file included from test.c:4:0:
+heap.c: In function ‘createHeap’:
+heap.c:36:20: error: assignment makes integer from pointer without a cast [-Werror=int-conversion]
+   harray->priority = NULL;
+                    ^
+cc1: all warnings being treated as errors
+Compilation failed
+e06c512
