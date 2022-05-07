@@ -315,3 +315,29 @@ test.c:292:1: error: expected declaration or statement at end of input
 cc1: all warnings being treated as errors
 Compilation failed
 22de289
+Sat May  7 20:25:23 UTC 2022: 
+ heap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:0:
+heap.c: In function ‘heap_push’:
+heap.c:33:32: error: invalid type argument of ‘->’ (have ‘heapElem {aka struct nodo}’)
+   while(pq->heapArray[pq->size]->priority > pq->heapArray[(pq->size-1)/2]->priority{
+                                ^~
+heap.c:33:74: error: invalid type argument of ‘->’ (have ‘heapElem {aka struct nodo}’)
+   while(pq->heapArray[pq->size]->priority > pq->heapArray[(pq->size-1)/2]->priority{
+                                                                          ^~
+heap.c:33:84: error: expected ‘)’ before ‘{’ token
+   while(pq->heapArray[pq->size]->priority > pq->heapArray[(pq->size-1)/2]->priority{
+                                                                                    ^
+heap.c:33:3: error: this ‘while’ clause does not guard... [-Werror=misleading-indentation]
+   while(pq->heapArray[pq->size]->priority > pq->heapArray[(pq->size-1)/2]->priority{
+   ^~~~~
+test.c:292:0: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘while’
+ }
+ 
+test.c:292:1: error: expected declaration or statement at end of input
+ }
+ ^
+cc1: all warnings being treated as errors
+Compilation failed
+27955c1
