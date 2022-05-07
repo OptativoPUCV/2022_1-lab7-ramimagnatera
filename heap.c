@@ -27,20 +27,20 @@ void heap_push(Heap* pq, void* data, int priority){
     pq->heapArray = (heapElem*) realloc(pq->heapArray, 2*(sizeof(heapElem))+1);
   }
 
-  pq->heapArray[size]->data = data;
-  pq->heapArray[size]->priority = priority;
+  pq->heapArray[pq->size]->data = data;
+  pq->heapArray[pq->size]->priority = priority;
 
-  while(pq->heapArray[size]->priority > pq->heapArray[(size-1)/2]->priority){
+  while(pq->heapArray[pq->size]->priority > pq->heapArray[(pq->size-1)/2]->priority{
     
     heapElem aux;
-    aux = pq->heapArray[size]->priority;
-    aux = pq->heapArray[size]->data;
+    aux = pq->heapArray[pq->size]->priority;
+    aux = pq->heapArray[pq->size]->data;
 
-    pq->heapArray[size]->priority = pq->heapArray[(size-1)/2]->priority;
-    pq->heapArray[size]->data = pq->heapArray[(size-1)/2]->data;
+    pq->heapArray[pq->size]->priority = pq->heapArray[(pq->size-1)/2]->priority;
+    pq->heapArray[pq->size]->data = pq->heapArray[(pq->size-1)/2]->data;
 
-    pq->heapArray[(size-1)/2]->priority = aux->priority;
-    pq->heapArray[(size-1)/2]->data = aux->data;
+    pq->heapArray[(pq->size-1)/2]->priority = aux->priority;
+    pq->heapArray[(pq->size-1)/2]->data = aux->data;
 }
 
 void heap_pop(Heap* pq){
