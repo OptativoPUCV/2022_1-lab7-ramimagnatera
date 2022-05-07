@@ -341,3 +341,16 @@ test.c:292:1: error: expected declaration or statement at end of input
 cc1: all warnings being treated as errors
 Compilation failed
 27955c1
+Sat May  7 20:25:58 UTC 2022: 
+ heap.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:4:0:
+heap.c: In function ‘heap_push’:
+heap.c:33:82: error: expected ‘)’ before ‘{’ token
+   while(pq->heapArray[pq->size].priority > pq->heapArray[(pq->size-1)/2].priority{
+                                                                                  ^
+heap.c:45:1: error: expected expression before ‘}’ token
+ }
+ ^
+Compilation failed
+60d2150
