@@ -428,3 +428,16 @@ Sat May  7 20:27:40 UTC 2022:
  tests:  4|2
 total_score: 30/70
 6d47374
+Sat May  7 20:45:01 UTC 2022: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+heap.c: In function ‘heap_push’:
+heap.c:40:62: error: stray ‘\’ in program
+     pq->heapArray[pq->size].data = pq->heapArray[(pq->size-1)\2].data;
+                                                              ^
+heap.c:40:63: error: expected ‘]’ before numeric constant
+     pq->heapArray[pq->size].data = pq->heapArray[(pq->size-1)\2].data;
+                                                               ^
+Compilation failed
+3863485
