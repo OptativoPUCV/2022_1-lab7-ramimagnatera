@@ -520,3 +520,13 @@ heap.c:27:57: error: invalid operands to binary * (have ‘int’ and ‘heapEle
                                                          ^~~~~~~~~~~~~~
 Compilation failed
 8e25814
+Sat May  7 21:07:03 UTC 2022: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+heap.c: In function ‘heap_push’:
+heap.c:27:71: error: ‘heapElem {aka struct nodo}’ has no member named ‘capac’
+     pq->heapArray = (heapElem*) realloc(pq->heapArray, 2*pq->heapArray->capac+1);
+                                                                       ^~
+Compilation failed
+9855025
