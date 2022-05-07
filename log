@@ -85,3 +85,14 @@ heap.c:34:14: error: unused variable ‘harray’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 a56d62b
+Sat May  7 02:04:31 UTC 2022: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+heap.c: In function ‘createHeap’:
+heap.c:34:6: error: ‘Heap {aka struct Heap}’ has no member named ‘harray’; did you mean ‘heapArray’?
+   h->harray = (heapElem*) malloc(3 * sizeof(heapElem));
+      ^~~~~~
+      heapArray
+Compilation failed
+99f5e1a
