@@ -500,3 +500,13 @@ Sat May  7 21:05:53 UTC 2022:
  tests:  5|2
 total_score: 35/70
 acd9e18
+Sat May  7 21:06:31 UTC 2022: 
+ heap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:0:
+heap.c: In function ‘heap_push’:
+heap.c:27:54: error: ‘heapElem {aka struct nodo}’ has no member named ‘capac’
+     pq->heapArray = (heapElem*) realloc(pq->heapArray->capac, 2*(sizeof(heapElem))+1);
+                                                      ^~
+Compilation failed
+22b6e71
