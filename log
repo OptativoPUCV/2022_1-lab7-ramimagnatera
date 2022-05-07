@@ -354,3 +354,40 @@ heap.c:45:1: error: expected expression before ‘}’ token
  ^
 Compilation failed
 60d2150
+Sat May  7 20:26:22 UTC 2022: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+heap.c: In function ‘heap_push’:
+heap.c:36:9: error: incompatible types when assigning to type ‘heapElem {aka struct nodo}’ from type ‘int’
+     aux = pq->heapArray[pq->size].priority;
+         ^
+heap.c:37:9: error: incompatible types when assigning to type ‘heapElem {aka struct nodo}’ from type ‘void *’
+     aux = pq->heapArray[pq->size].data;
+         ^
+heap.c:39:28: error: invalid type argument of ‘->’ (have ‘heapElem {aka struct nodo}’)
+     pq->heapArray[pq->size]->priority = pq->heapArray[(pq->size-1)/2]->priority;
+                            ^~
+heap.c:39:70: error: invalid type argument of ‘->’ (have ‘heapElem {aka struct nodo}’)
+     pq->heapArray[pq->size]->priority = pq->heapArray[(pq->size-1)/2]->priority;
+                                                                      ^~
+heap.c:40:28: error: invalid type argument of ‘->’ (have ‘heapElem {aka struct nodo}’)
+     pq->heapArray[pq->size]->data = pq->heapArray[(pq->size-1)/2]->data;
+                            ^~
+heap.c:40:66: error: invalid type argument of ‘->’ (have ‘heapElem {aka struct nodo}’)
+     pq->heapArray[pq->size]->data = pq->heapArray[(pq->size-1)/2]->data;
+                                                                  ^~
+heap.c:42:34: error: invalid type argument of ‘->’ (have ‘heapElem {aka struct nodo}’)
+     pq->heapArray[(pq->size-1)/2]->priority = aux->priority;
+                                  ^~
+heap.c:42:50: error: invalid type argument of ‘->’ (have ‘heapElem {aka struct nodo}’)
+     pq->heapArray[(pq->size-1)/2]->priority = aux->priority;
+                                                  ^~
+heap.c:43:34: error: invalid type argument of ‘->’ (have ‘heapElem {aka struct nodo}’)
+     pq->heapArray[(pq->size-1)/2]->data = aux->data;
+                                  ^~
+heap.c:43:46: error: invalid type argument of ‘->’ (have ‘heapElem {aka struct nodo}’)
+     pq->heapArray[(pq->size-1)/2]->data = aux->data;
+                                              ^~
+Compilation failed
+b5f4f35
