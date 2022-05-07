@@ -96,3 +96,9 @@ heap.c:34:6: error: ‘Heap {aka struct Heap}’ has no member named ‘harray�
       heapArray
 Compilation failed
 99f5e1a
+Sat May  7 02:04:44 UTC 2022: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  1|3
+total_score: 10/70
+072993d
