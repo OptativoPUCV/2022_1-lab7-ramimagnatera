@@ -17,7 +17,7 @@ typedef struct Heap{
 } Heap;
 
 void* heap_top(Heap* pq){
-  return pq->heapArray[0].priority;
+  return pq->heapArray[0]->data;
 }
 
 void heap_push(Heap* pq, void* data, int priority){
