@@ -200,3 +200,13 @@ Sat May  7 02:16:41 UTC 2022:
  tests:  2|2
 total_score: 20/70
 68931aa
+Sat May  7 04:52:45 UTC 2022: 
+ heap.c | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+In file included from test.c:4:0:
+heap.c: In function ‘heap_push’:
+heap.c:26:63: error: expected expression before ‘)’ token
+     pq->heapArray = (heapElem*) realloc(pq->heapArray, sizeof())
+                                                               ^
+Compilation failed
+a0f63a0
