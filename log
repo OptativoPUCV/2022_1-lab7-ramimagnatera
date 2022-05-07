@@ -18,3 +18,13 @@ Sat May  7 00:58:09 UTC 2022:
  tests:  0|4
 total_score: 0/70
 918e616
+Sat May  7 00:59:40 UTC 2022: 
+ heap.c | 7 ++++---
+ 1 file changed, 4 insertions(+), 3 deletions(-)
+In file included from test.c:4:0:
+heap.c: In function ‘createHeap’:
+heap.c:34:14: error: expected identifier or ‘(’ before ‘=’ token
+   heapElem * = (heapElem*) malloc(3 * sizeof(heapElem))
+              ^
+Compilation failed
+71c168d
