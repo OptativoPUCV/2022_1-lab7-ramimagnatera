@@ -615,3 +615,16 @@ Sun May  8 01:41:59 UTC 2022:
  tests:  6|2
 total_score: 35/70
 887f20b
+Sun May  8 01:42:14 UTC 2022: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+heap.c: In function ‘heap_push’:
+heap.c:27:68: error: invalid suffix "sizeof" on integer constant
+     pq->heapArray = (heapElem*) realloc (pq->heapArray, (pq->capac*2sizeof(heapElem))+1);
+                                                                    ^~~~~~~
+heap.c:27:76: error: expected expression before ‘heapElem’
+     pq->heapArray = (heapElem*) realloc (pq->heapArray, (pq->capac*2sizeof(heapElem))+1);
+                                                                            ^~~~~~~~
+Compilation failed
+a8c747f
