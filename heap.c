@@ -25,6 +25,7 @@ void heap_push(Heap* pq, void* data, int priority){
 
   if (pq->size == pq->capac){
     pq->heapArray = (heapElem*) realloc (pq->heapArray, (pq->capac * 2 * sizeof(heapElem)) + 1 );
+    pq->capac = pq->capac*2+1
   }
   
   int cont = pq->size;

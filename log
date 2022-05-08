@@ -587,3 +587,13 @@ Sun May  8 01:40:33 UTC 2022:
  tests:  5|2
 total_score: 35/70
 3eac94e
+Sun May  8 01:41:22 UTC 2022: 
+ heap.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:4:0:
+heap.c: In function ‘heap_push’:
+heap.c:29:3: error: expected ‘;’ before ‘}’ token
+   }
+   ^
+Compilation failed
+d1d8d74
