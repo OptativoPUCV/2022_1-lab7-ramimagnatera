@@ -680,3 +680,25 @@ heap.c:53:27: error: incompatible types when assigning to type ‘heapElem {aka 
                            ^
 Compilation failed
 21fba76
+Sun May  8 01:56:35 UTC 2022: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+heap.c: In function ‘heap_pop’:
+heap.c:53:8: error: incompatible type for argument 1 of ‘free’
+   free(pq->heapArray[pq->size])
+        ^~
+In file included from test.c:2:0:
+/usr/include/stdlib.h:563:13: note: expected ‘void *’ but argument is of type ‘heapElem {aka struct nodo}’
+ extern void free (void *__ptr) __THROW;
+             ^~~~
+In file included from test.c:4:0:
+heap.c:55:3: error: expected ‘;’ before ‘while’
+   while(pq->heapArray[pq->size].priority < pq->heapArray[pq->size*2+1].priority || pq->heapArray[pq->size].priority < pq->heapArray[pq->size*2+2].priority){
+   ^~~~~
+heap.c:51:12: error: unused variable ‘aux’ [-Werror=unused-variable]
+   heapElem aux;
+            ^~~
+cc1: all warnings being treated as errors
+Compilation failed
+c339857
