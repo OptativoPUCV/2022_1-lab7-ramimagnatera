@@ -61,15 +61,14 @@ void heap_pop(Heap* pq){
       aux = pq->heapArray[0];
       pq->heapArray[0] = pq->heapArray[pos*2+2];
       pq->heapArray[pos*2+2] = aux;
-      pos = pq->heapArray[pos*2+2];
+      pos = pos*2+2;
     }
     else{
       aux = pq->heapArray[0];
       pq->heapArray[0] = pq->heapArray[pos*2+1];
       pq->heapArray[pos*2+1] = aux;
-      pos = pq->heapArray[pos*2+1];
+      pos = pos*2+1;
     }
-    
   }
   pq->size--;
 }
