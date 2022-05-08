@@ -716,3 +716,13 @@ In file included from test.c:2:0:
              ^~~~
 Compilation failed
 e69aad2
+Sun May  8 01:57:54 UTC 2022: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+heap.c: In function ‘heap_pop’:
+heap.c:53:27: error: incompatible types when assigning to type ‘heapElem {aka struct nodo}’ from type ‘int’
+   pq->heapArray[pq->size] = 0;
+                           ^
+Compilation failed
+056af9a
