@@ -787,3 +787,19 @@ heap.c:58:99: error: invalid type argument of ‘->’ (have ‘int’)
                                                                                                    ^~
 Compilation failed
 dc38fe5
+Sun May  8 02:49:03 UTC 2022: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+heap.c: In function ‘heap_pop’:
+heap.c:58:25: error: ‘Heap {aka struct Heap}’ has no member named ‘pos’
+   while(pq->heapArray[pq->pos].priority < pq->heapArray[pq->pos*2+1].priority || pq->heapArray[pos->pos].priority < pq->heapArray[pos*2+2].priority){
+                         ^~
+heap.c:58:59: error: ‘Heap {aka struct Heap}’ has no member named ‘pos’
+   while(pq->heapArray[pq->pos].priority < pq->heapArray[pq->pos*2+1].priority || pq->heapArray[pos->pos].priority < pq->heapArray[pos*2+2].priority){
+                                                           ^~
+heap.c:58:99: error: invalid type argument of ‘->’ (have ‘int’)
+   while(pq->heapArray[pq->pos].priority < pq->heapArray[pq->pos*2+1].priority || pq->heapArray[pos->pos].priority < pq->heapArray[pos*2+2].priority){
+                                                                                                   ^~
+Compilation failed
+c6cf3f7
