@@ -819,3 +819,9 @@ heap.c:58:98: error: ‘Heap {aka struct Heap}’ has no member named ‘pos’
                                                                                                   ^~
 Compilation failed
 f470eb9
+Sun May  8 02:49:47 UTC 2022: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  8|0
+total_score: 70/70
+1f9be8f
