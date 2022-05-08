@@ -732,3 +732,26 @@ Sun May  8 02:20:57 UTC 2022:
  tests:  7|1
 total_score: 45/70
 651e41e
+Sun May  8 02:23:28 UTC 2022: 
+ heap.c | 15 +++++++++------
+ 1 file changed, 9 insertions(+), 6 deletions(-)
+In file included from test.c:4:0:
+heap.c: In function ‘heap_pop’:
+heap.c:57:25: error: ‘Heap {aka struct Heap}’ has no member named ‘pos’
+   while(pq->heapArray[pq->pos].priority < pq->heapArray[pq->pos*2+1].priority || pq->heapArray[pos->size].priority < pq->heapArray[pos*2+2].priority){
+                         ^~
+heap.c:57:59: error: ‘Heap {aka struct Heap}’ has no member named ‘pos’
+   while(pq->heapArray[pq->pos].priority < pq->heapArray[pq->pos*2+1].priority || pq->heapArray[pos->size].priority < pq->heapArray[pos*2+2].priority){
+                                                           ^~
+heap.c:57:99: error: invalid type argument of ‘->’ (have ‘int’)
+   while(pq->heapArray[pq->pos].priority < pq->heapArray[pq->pos*2+1].priority || pq->heapArray[pos->size].priority < pq->heapArray[pos*2+2].priority){
+                                                                                                   ^~
+In file included from test.c:4:0:
+heap.c:64:11: error: incompatible types when assigning to type ‘int’ from type ‘heapElem {aka struct nodo}’
+       pos = pq->heapArray[pos*2+2];
+           ^
+heap.c:70:11: error: incompatible types when assigning to type ‘int’ from type ‘heapElem {aka struct nodo}’
+       pos = pq->heapArray[pos*2+1];
+           ^
+Compilation failed
+33126db
