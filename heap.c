@@ -50,8 +50,9 @@ void heap_push(Heap* pq, void* data, int priority){
 void heap_pop(Heap* pq){
   heapElem aux;
   pq->heapArray[0] = pq->heapArray[pq->size];
-  pq->heapArray[pq->size] = 0;
-
+  pq->heapArray[pq->size].priority = 0;
+  pq->heapArray[pq->size].data = NULL;
+  
   while(pq->heapArray[pq->size].priority < pq->heapArray[pq->size*2+1].priority || pq->heapArray[pq->size].priority < pq->heapArray[pq->size*2+2].priority){
 
     printf("a");
